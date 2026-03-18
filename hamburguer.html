@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Noite do Hambúrguer</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      background: #e63946;
+      padding: 15px;
+    }
+    .card {
+      background: #222;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      background: #e63946;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff4d5a;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🍔 Noite do Hambúrguer</h1>
+
+<div class="card">
+  <h2>Hambúrguer Completo</h2>
+  <p>R$15</p>
+  <button onclick="pedir('Hambúrguer Completo - R$15')">Pedir</button>
+</div>
+
+<div class="card">
+  <h2>Trio (Hambúrguer + Batata + Guaravita)</h2>
+  <p>R$20</p>
+  <button onclick="pedir('Trio - R$20')">Pedir</button>
+</div>
+
+<div class="card">
+  <h2>Batata Separada</h2>
+  <p>R$8</p>
+  <button onclick="pedir('Batata Separada - R$8')">Pedir</button>
+</div>
+
+<div class="card">
+  <h2>Guaravita</h2>
+  <p>R$3</p>
+  <button onclick="pedir('Guaravita - R$3')">Pedir</button>
+</div>
+
+<script>
+function pedir(item) {
+  let numero = "5521997383869"; // COLOCA SEU NÚMERO AQUI
+  let mensagem = "Olá! Quero pedir: " + item + "%0A%0ANome:%0AEndereço:%0AForma de pagamento:";
+  window.open("https://wa.me/" + numero + "?text=" + mensagem, "_blank");
+}
+</script>
+
+</body>
+</html>
